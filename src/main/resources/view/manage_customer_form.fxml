@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="573.0" prefWidth="896.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageCustomerFormController">
+   <children>
+      <ImageView fitHeight="45.0" fitWidth="217.0" layoutX="360.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/ThogaKadeLogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="334.0" layoutY="51.0" text="Customer Operations">
+         <font>
+            <Font name="SansSerif Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCustomers" layoutX="26.0" layoutY="121.0" prefHeight="400.0" prefWidth="525.0" stylesheets="@../css/Table.css">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="65.0" text="ID" />
+            <TableColumn fx:id="colTitle" prefWidth="55.0" text="Title" />
+            <TableColumn fx:id="colName" prefWidth="130.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="92.0" text="Address" />
+            <TableColumn fx:id="colContact" minWidth="4.0" prefWidth="95.0" text="Contact" />
+            <TableColumn fx:id="colDOB" prefWidth="88.0" text="DOB" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="33.0" layoutY="529.0" onAction="#btnReloadOnAction" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: grey;" text="Reload" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="309.0" layoutY="79.0" opacity="0.53" text="Streamline Your Customer Management with Ease">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerID" editable="false" focusColor="#0dcfdb" layoutX="599.0" layoutY="207.0" opacity="0.85" prefHeight="36.0" prefWidth="262.0" promptText="Customer ID">
+         <font>
+            <Font name="SansSerif Regular" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtName" editable="false" focusColor="#0dcfdb" layoutX="676.0" layoutY="264.0" opacity="0.85" prefHeight="36.0" prefWidth="182.0" promptText="Name">
+         <font>
+            <Font name="SansSerif Regular" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" editable="false" focusColor="#0dcfdb" layoutX="599.0" layoutY="319.0" opacity="0.85" prefHeight="36.0" prefWidth="262.0" promptText="Address">
+         <font>
+            <Font name="SansSerif Regular" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" editable="false" focusColor="#0dcfdb" layoutX="598.0" layoutY="382.0" opacity="0.85" prefHeight="36.0" prefWidth="262.0" promptText="Contact">
+         <font>
+            <Font name="SansSerif Regular" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbTitle" focusColor="#0dcfdb" layoutX="598.0" layoutY="264.0" prefHeight="36.0" prefWidth="72.0" promptText="Title" />
+      <DatePicker fx:id="txtDateOfBirth" editable="false" layoutX="598.0" layoutY="440.0" prefHeight="36.0" prefWidth="262.0" promptText="Date Of Birth" styleClass="date-picker" stylesheets="@../css/Datepicker.css">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </DatePicker>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" disable="true" layoutX="775.0" layoutY="505.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #03c90d;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" disable="true" layoutX="687.0" layoutY="505.0" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #FE0000;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtSearch" focusColor="#0dcfdb" layoutX="598.0" layoutY="129.0" onAction="#txtSearchOnAction" prefHeight="30.0" prefWidth="182.0" promptText="Search by ID or Contact" styleClass="text-field">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton contentDisplay="CENTER" layoutX="792.0" layoutY="135.0" onAction="#btnSearchOnAction" prefHeight="27.0" prefWidth="72.0" style="-fx-background-color: #0dcfdb;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

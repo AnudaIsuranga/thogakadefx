@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="550.0" prefWidth="740.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewCustomerFormController">
+   <children>
+      <ImageView fitHeight="45.0" fitWidth="217.0" layoutX="283.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/ThogaKadeLogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="262.0" layoutY="75.0" text="View Customer Form">
+         <font>
+            <Font name="SansSerif Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCustomers" layoutX="25.0" layoutY="150.0" prefHeight="323.0" prefWidth="690.0" stylesheets="@../css/Table.css">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="77.0" text="ID" />
+            <TableColumn fx:id="colTitle" prefWidth="82.0" text="Title" />
+            <TableColumn fx:id="colName" prefWidth="149.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="138.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="124.0" text="Contact" />
+            <TableColumn fx:id="colDOB" prefWidth="119.0" text="DOB" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="597.0" layoutY="488.0" onAction="#btnReloadOnAction" prefHeight="30.0" prefWidth="105.0" style="-fx-background-color: grey;" text="Reload" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="244.0" layoutY="105.0" opacity="0.53" text="Effortlessly Manage and View Customer Details">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

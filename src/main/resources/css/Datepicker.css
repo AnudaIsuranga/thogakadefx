@@ -1,0 +1,23 @@
+.date-picker{
+    -fx-border-color: #000000;
+    -fx-border-width: 0 0 1px 0;
+    -fx-text-fill: rgba(0, 0, 0, 1);
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-insets: 0;
+}
+
+.date-picker .text-field {
+    -fx-padding: 0;
+    -fx-font-family: "SansSerif";
+    -fx-font-size: 12px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #4d4d4d;
+}
+
+.date-picker:focused {
+    -fx-border-color: #0dcfdb;
+    -fx-border-width: 0 0 2px 0;
+    -fx-background-color: #ffffff;
+}

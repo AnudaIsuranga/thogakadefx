@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="459.0" prefWidth="580.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+   <children>
+      <ImageView fitHeight="334.0" fitWidth="328.0" layoutX="252.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/cart2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="59.0" fitWidth="249.0" layoutX="36.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/ThogaKadeLogo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="35.0" layoutY="116.0" opacity="0.53" text="Your one-stop shop for fresh produce and">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="138.0" opacity="0.53" text=" everyday essentials">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnAddNewCustomer" buttonType="RAISED" layoutX="66.0" layoutY="209.0" onAction="#btnAddNewCustomerOnAction" prefHeight="40.0" prefWidth="187.0" style="-fx-background-color: #0dcfdb; -fx-border-color: #4287f5;" text="Add New Customer" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnManageCustomer" buttonType="RAISED" layoutX="66.0" layoutY="268.0" onAction="#btnManageCustomerOnAction" prefHeight="40.0" prefWidth="187.0" style="-fx-background-color: #0dcfdb; -fx-border-color: #4287f5;" text="Manage Customer" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="211.0" layoutY="432.0" opacity="0.37" text="Thogakade@IroshanRathnayake" />
+      <JFXButton fx:id="btnViewCustomer" buttonType="RAISED" layoutX="66.0" layoutY="327.0" onAction="#btnViewCustomerOnAction" prefHeight="40.0" prefWidth="187.0" style="-fx-background-color: #0dcfdb; -fx-border-color: #4287f5;" text="View Customer" textFill="WHITE">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
